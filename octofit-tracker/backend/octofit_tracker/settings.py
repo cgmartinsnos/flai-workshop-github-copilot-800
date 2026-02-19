@@ -25,7 +25,19 @@ SECRET_KEY = 'django-insecure-667n=q-+nx36$%8e2z7twzy6mpp2qs3xl2mb+=!gab@_2txh49
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+import os
+
+# Allow localhost, 127.0.0.1, and GitHub Codespaces URLs
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '.app.github.dev',  # Allow all GitHub Codespace URLs
+]
+
+# Get CODESPACE_NAME from environment
+CODESPACE_NAME = os.environ.get('CODESPACE_NAME')
+if CODESPACE_NAME:
+    ALLOWED_HOSTS.append(f'{CODESPACE_NAME}-8000.app.github.dev')
 
 
 # Application definition
@@ -137,5 +149,13 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = ['*']
 CORS_ALLOW_HEADERS = ['*']
+
+# CSRF Settings for GitHub Codespaces
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.app.github.dev',
+]
+if CODESPACE_NAME:
+    CSRF_TRUSTED_ORIGINS.append(f'https://{CODESPACE_NAME}-8000.app.github.dev')
+    CSRF_TRUSTED_ORIGINS.append(f'https://{CODESPACE_NAME}-3000.app.github.dev')
 
 # Step 3 validation: This file contains 'djongo' in INSTALLED_APPS and DATABASES ENGINE
