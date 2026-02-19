@@ -17,6 +17,18 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from octofit_tracker import views
+import os
+
+# Configure base URL for GitHub Codespaces
+# When running in Codespaces, API will be accessible at:
+# https://${CODESPACE_NAME}-8000.app.github.dev/api/
+CODESPACE_NAME = os.environ.get('CODESPACE_NAME')
+if CODESPACE_NAME:
+    # Codespace URL format: https://{CODESPACE_NAME}-8000.app.github.dev
+    BASE_URL = f'https://{CODESPACE_NAME}-8000.app.github.dev'
+else:
+    # Local development
+    BASE_URL = 'http://localhost:8000'
 
 # Create a router and register our viewsets
 router = routers.DefaultRouter()
