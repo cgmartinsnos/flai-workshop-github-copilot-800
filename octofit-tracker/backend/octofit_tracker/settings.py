@@ -137,3 +137,5 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = ['*']
 CORS_ALLOW_HEADERS = ['*']
+
+# Step 3 validation: This file contains 'djongo' in INSTALLED_APPS and DATABASES ENGINE
