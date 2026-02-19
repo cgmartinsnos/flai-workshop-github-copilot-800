@@ -1,0 +1,311 @@
+/* OctoFit Tracker Custom Styles */
+
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-attachment: fixed;
+}
+
+/* Navigation Styles */
+.navbar {
+  background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  padding: 1rem 2rem;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-logo {
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.navbar-brand-text {
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  color: #ffffff !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin: 0 0.25rem;
+  color: #e0e7ff !important;
+  border-radius: 6px;
+  padding: 0.5rem 1rem !important;
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff !important;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.25) !important;
+  border-radius: 6px;
+  color: #ffffff !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Page Content Styles */
+.container {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 2px solid rgba(102, 126, 234, 0.2);
+}
+
+/* Heading Styles */
+h2 {
+  color: #1e3c72;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-image-slice: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styles */
+.table-responsive {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+}
+
+.table thead th {
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  padding: 1rem;
+}
+
+.table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+  background: linear-gradient(90deg, #f8f9fa 0%, #e8eaf6 100%);
+  transform: scale(1.01);
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
+}
+
+.table tbody td {
+  vertical-align: middle;
+  padding: 1rem;
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  font-weight: 600;
+  padding: 1rem 1.25rem;
+  border-bottom: none;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Alert Styles */
+.alert {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading Spinner */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.3rem;
+}
+
+/* Home/Jumbotron Styles */
+.jumbotron {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.jumbotron h1 {
+  font-weight: 700;
+  color: white;
+  border: none;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.jumbotron .lead {
+  font-size: 1.25rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.jumbotron .card {
+  transition: all 0.3s ease;
+  border: 2px solid rgba(102, 126, 234, 0.3);
+}
+
+.jumbotron .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.4);
+  border-color: #667eea;
+}
+
+/* Clickable Card Styles */
+.clickable-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clickable-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(102, 126, 234, 0.5) !important;
+}
+
+.clickable-card .card-title {
+  color: #1e3c72;
+}
+
+.clickable-card .card-text {
+  color: #495057;
+}
+
+/* Badge Styles */
+.badge {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.badge.bg-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+.badge.bg-success {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
+}
+
+.badge.bg-info {
+  background: linear-gradient(135deg, #17a2b8 0%, #138496 100%) !important;
+}
+
+.badge.bg-warning {
+  background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%) !important;
+}
+
+.badge.bg-danger {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%) !important;
+}
+
+/* Button Styles */
+.btn {
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.btn-outline-success {
+  border: 2px solid #28a745 !important;
+  color: #28a745 !important;
+  font-weight: 600;
+}
+
+.btn-outline-success:hover {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
+  color: white !important;
+  border-color: #28a745 !important;
+}
+
+.btn-info {
+  background: linear-gradient(135deg, #17a2b8 0%, #138496 100%) !important;
+  border: none !important;
+}
+
+/* Link Styles */
+a {
+  color: #667eea;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.text-decoration-none:hover {
+  color: #2a5298;
+  text-decoration: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .table thead th,
+  .table tbody td {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+}
